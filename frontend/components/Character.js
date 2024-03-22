@@ -8,15 +8,15 @@ function Character({ character }) {
   }
     return (
       <div className="character-card" onClick={toggleDetails}>
-        <h3>{character.name}</h3>
-        {showDetails && (
-          <>
-            {character.homeworld && (
-              <p>Planet: {character.homeworld.name}</p>
-            )}
-          </>
-        )}
-      </div>
+      <h3 className="character-name">{character.name}</h3>
+      {showDetails && (
+        <>
+          {character.homeworld && (
+            <p className="character-planet">Homeworld: {character.homeworld.name}</p>
+          )}
+        </>
+      )}
+    </div>
   )
 }
 export default Character
